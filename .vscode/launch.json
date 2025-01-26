@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    
+    {
+      "type": "java",
+      "name": "Launch Java Program",
+      "request": "launch",
+      "mainClass": "com.example.Main"
+    }
+
+  ]
+}
