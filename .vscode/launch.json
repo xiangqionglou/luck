@@ -6,6 +6,7 @@
       "name": "Launch Java Program",
       "request": "launch",
       "mainClass": "com.xiangql.LuckMain"
+
     }
   ]
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiangql.dao.UserDao">
+
+    <!-- 查询所有用户 -->
+    <select id="getAllUsers" resultType="com.xiangql.beans.UserBean">
+        SELECT * FROM user
+    </select>
+
+    <!-- 根据ID查询用户 -->
+    <select id="getUserById" parameterType="int" resultType="com.xiangql.beans.UserBean">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <!-- 插入用户 -->
+    <insert id="saveUser" parameterType="com.xiangql.beans.UserBean">
+        INSERT INTO user (username, email) VALUES (#{username}, #{email})
+    </insert>
+
+    <!-- 更新用户 -->
+    <update id="updateUser" parameterType="com.xiangql.beans.UserBean">
+        UPDATE user SET username = #{username}, email = #{email} WHERE id = #{id}
+    </update>
+
+    <!-- 删除用户 -->
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+
+</mapper>

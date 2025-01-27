@@ -1,8 +1,3 @@
-# MyBatis 配置
-mybatis:
-  config-location: classpath:mybatis-config.xml
-  mapper-locations: classpath:mapper/*.xml
-
 # 数据源配置
 spring:
   datasource:
@@ -10,3 +5,7 @@ spring:
     driver-class-name: org.sqlite.JDBC
     username: 
     password: 
+# MyBatis 配置
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml

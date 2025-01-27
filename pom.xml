@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -20,11 +21,17 @@
             <artifactId>spring-boot-starter</artifactId>
             <version>2.7.5</version>
         </dependency>
+        <!-- Spring Web 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.5</version>
+        </dependency>
         <!-- MyBatis 依赖 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.2</version>
+            <version>3.0.0</version>
         </dependency>
         <!-- SQLite 驱动依赖 -->
         <dependency>
@@ -32,6 +39,7 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.41.2.1</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -41,6 +49,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.7.5</version>
+                <configuration>
+                    <mainClass>com.xiangql.LuckMain</mainClass> <!-- 指定你的主类 -->
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -49,6 +60,16 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <nonFilteredFileExtensions>
+                    <nonFilteredFileExtension>db</nonFilteredFileExtension>
+                    </nonFilteredFileExtensions>
+                </configuration>
+            </plugin>    
         </plugins>
         <resources>
         <resource>

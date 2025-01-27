@@ -6,4 +6,7 @@
     <!-- 其他设置 -->
   </settings>
   <!-- 可以在这里添加类型别名、插件等配置 -->
+  <typeAliases>
+    <package name="com.xiangql.beans"/>
+  </typeAliases>
 </configuration>
