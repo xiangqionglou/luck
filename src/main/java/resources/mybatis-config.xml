@@ -1,0 +1,9 @@
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <settings>
+    <!-- 其他设置 -->
+  </settings>
+  <!-- 可以在这里添加类型别名、插件等配置 -->
+</configuration>
